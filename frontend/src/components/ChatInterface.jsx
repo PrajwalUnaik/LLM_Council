@@ -37,12 +37,26 @@ export default function ChatInterface({
     }
   };
 
+  const suggestedPrompts = [
+    'What are the best places to travel in Europe?',
+    'Explain quantum computing in simple terms',
+    'Python vs JavaScript — which should I learn first?',
+    'What will AI look like in 10 years?',
+  ];
+
   if (!conversation) {
     return (
       <div className="chat-interface">
         <div className="empty-state">
           <h2>Welcome to LLM Council</h2>
           <p>Create a new conversation to get started</p>
+          <div className="suggested-prompts">
+            {suggestedPrompts.map((prompt, i) => (
+              <button key={i} className="prompt-card" disabled>
+                {prompt}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
     );
@@ -55,6 +69,13 @@ export default function ChatInterface({
           <div className="empty-state">
             <h2>Start a conversation</h2>
             <p>Ask a question to consult the LLM Council</p>
+            <div className="suggested-prompts">
+              {suggestedPrompts.map((prompt, i) => (
+                <button key={i} className="prompt-card" onClick={() => setInput(prompt)}>
+                  {prompt}
+                </button>
+              ))}
+            </div>
           </div>
         ) : (
           conversation.messages.map((msg, index) => (

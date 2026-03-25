@@ -3,6 +3,41 @@
   border-color: var(--border-stage3);
 }
 
+.stage3-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.stage3-header .stage-title {
+  margin: 0;
+}
+
+.copy-btn {
+  padding: 5px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid var(--border-primary);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.copy-btn:hover {
+  border-color: var(--blue-primary);
+  color: var(--blue-primary);
+}
+
+.copy-btn.copied,
+.copy-btn:active {
+  border-color: var(--color-chairman);
+  color: var(--color-chairman);
+}
+
 .final-response {
   background: var(--bg-app);
   padding: 20px;

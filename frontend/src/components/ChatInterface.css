@@ -33,6 +33,40 @@
   font-size: 16px;
 }
 
+.suggested-prompts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 32px;
+  max-width: 560px;
+  width: 100%;
+}
+
+.prompt-card {
+  padding: 14px 16px;
+  background: var(--bg-stage);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 14px;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  line-height: 1.4;
+}
+
+.prompt-card:hover:not(:disabled) {
+  border-color: var(--blue-primary);
+  background: var(--bg-user-msg);
+  color: var(--blue-primary);
+}
+
+.prompt-card:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
 .message-group {
   margin-bottom: 32px;
 }
