@@ -1,0 +1,146 @@
+.sidebar {
+  width: 260px;
+  background: var(--bg-sidebar);
+  border-right: 1px solid var(--border-primary);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.sidebar-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.sidebar-header-row h1 {
+  font-size: 18px;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.theme-toggle {
+  position: relative;
+  width: 44px;
+  height: 24px;
+  background: var(--border-primary);
+  border: 1px solid var(--border-input);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.25s, border-color 0.25s;
+  flex-shrink: 0;
+  padding: 0;
+}
+
+.theme-toggle[aria-checked="true"] {
+  background: var(--blue-primary);
+  border-color: var(--blue-primary);
+}
+
+.theme-toggle::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: transform 0.25s;
+}
+
+.theme-toggle[aria-checked="true"]::after {
+  transform: translateX(20px);
+}
+
+.theme-toggle-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+
+.theme-toggle-icon.sun {
+  left: 4px;
+  opacity: 1;
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle-icon.sun {
+  opacity: 0;
+}
+
+.theme-toggle-icon.moon {
+  right: 4px;
+  opacity: 0;
+}
+
+.theme-toggle[aria-checked="true"] .theme-toggle-icon.moon {
+  opacity: 1;
+}
+
+.new-conversation-btn {
+  width: 100%;
+  padding: 10px;
+  background: var(--blue-primary);
+  border: 1px solid var(--blue-primary);
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+  font-weight: 500;
+}
+
+.new-conversation-btn:hover {
+  background: var(--blue-hover);
+  border-color: var(--blue-hover);
+}
+
+.conversation-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px;
+}
+
+.no-conversations {
+  padding: 16px;
+  text-align: center;
+  color: var(--text-placeholder);
+  font-size: 14px;
+}
+
+.conversation-item {
+  padding: 12px;
+  margin-bottom: 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.conversation-item:hover {
+  background: var(--conv-hover-bg);
+}
+
+.conversation-item.active {
+  background: var(--conv-active-bg);
+  border: 1px solid var(--blue-primary);
+}
+
+.conversation-title {
+  color: var(--text-primary);
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+.conversation-meta {
+  color: var(--text-placeholder);
+  font-size: 12px;
+}
