@@ -2,7 +2,7 @@
 
 ![llmcouncil](header.jpg)
 
-> **Case Study Project** — Advanced Data Science & AI (ADSA), SRH Heidelberg (Master's Program)
+> **Case Study Project** — Advanced Data Science & Analytics (ADSA), SRH Heidelberg (Master's Program)
 
 Instead of asking a single AI model your question and hoping it's right, **LLM Council** sends your query to a panel of top LLMs simultaneously. They independently answer, anonymously review each other's work, and a designated Chairman synthesizes the best final response.
 
@@ -134,6 +134,6 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ## Project Context
 
-This project was built as a **Case Study** for the *Advanced Data Science & AI (ADSA)* module at **SRH Heidelberg** as part of the Master's program. The goal was to explore multi-model AI architectures, ensemble reasoning, and the concept of blind peer evaluation applied to large language models.
+This project was built as a **Case Study** for the *Advanced Data Science & Analytics (ADSA)* module at **SRH Heidelberg** as part of the Master's program. The goal was to explore multi-model AI architectures, ensemble reasoning, and the concept of blind peer evaluation applied to large language models.
 
 The core research question: *Can a structured deliberation process among multiple LLMs produce better answers than any single model alone?*
