@@ -156,6 +156,14 @@ def add_assistant_message(
     save_conversation(conversation)
 
 
+def delete_conversation(conversation_id: str) -> bool:
+    path = get_conversation_path(conversation_id)
+    if not os.path.exists(path):
+        return False
+    os.remove(path)
+    return True
+
+
 def update_conversation_title(conversation_id: str, title: str):
     """
     Update the title of a conversation.

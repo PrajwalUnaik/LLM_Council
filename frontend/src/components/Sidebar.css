@@ -123,6 +123,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.2s;
+  position: relative;
 }
 
 .conversation-item:hover {
@@ -143,4 +144,33 @@
 .conversation-meta {
   color: var(--text-placeholder);
   font-size: 12px;
+}
+
+.delete-conv-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 22px;
+  height: 22px;
+  border-radius: 4px;
+  border: none;
+  background: transparent;
+  color: var(--text-muted);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, color 0.15s;
+}
+
+.conversation-item:hover .delete-conv-btn {
+  display: flex;
+}
+
+.delete-conv-btn:hover {
+  background: #fde8e8;
+  color: #d93025;
 }
